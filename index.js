@@ -21,8 +21,22 @@ function pickPointer() {
     for (const pointer in document.allPointers[p]) {
         const weight = document.allPointers[p][pointer]
         if ((choice -= weight) <= 0) {
-            console.log(pointer);
             return pointer
         }
     }
 }
+
+function genMeta() {
+    var x = document.querySelector("[name='monetization']")
+    if(x) {
+        x.remove();
+    }
+    const monTag = document.createElement('meta');
+    monTag.name = 'monetization';
+    monTag.content = pickPointer();
+    document.head.appendChild(monTag);
+}
+
+window.addEventListener('load', () => {
+    genMeta();
+});
