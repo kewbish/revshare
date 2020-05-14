@@ -1,4 +1,4 @@
-document.allPointers = []
+document.allPointers = {}
 
 class RevShare extends HTMLElement {
 
@@ -6,11 +6,14 @@ class RevShare extends HTMLElement {
         this.style.margin = "0";
         this.style.padding = "0";
         console.log('New Revshare element created.');
-        var parsedPointers = this.getAttribute('pointers');
-        parsedPointers = JSON.parse(parsedPointers);
-        document.allPointers.push(parsedPointers);
+        var parsedPointers = JSON.parse(this.getAttribute('pointers'));
+        var revId = this.getAttribute('rev-id');
+        document.allPointers[revId] = parsedPointers;
     }
     attributeChangedCallback() {
+        var parsedPointers = JSON.parse(this.getAttribute('pointers'));
+        var revId = this.getAttribute('rev-id');
+        document.allPointers[revId] = parsedPointers;
         genMeta();
     }
     static get observedAttributes() {
