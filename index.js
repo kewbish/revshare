@@ -1,5 +1,3 @@
-document.allPointers = {}
-
 class RevShare extends HTMLElement {
 
     connectedCallback() {
@@ -16,13 +14,16 @@ class RevShare extends HTMLElement {
     }
     checkParsedPointers() {
         var parsedPointers = JSON.parse(this.getAttribute('pointers'));
+        if (typeof Object.values(parsedPointers) !== Number){
+            throw "RevShareTypeError: revshare proportions are of incorrect type. Check that your pointers attribute is correctly formatted.";
+        }
         if (Object.values(parsedPointers).reduce((a, b) => a + b) != 100) {
             console.warn('RevShareProportionWarning: revshare proportions do not sum to 100. Check that these proportions are correct');
         }
     }
 }
 
-window.customElements.define('rev-share', RevShare);
+customElements.define('rev-share', RevShare);
 
 function pickPointer() {
     var revEls = document.getElementsByTagName('rev-share');
