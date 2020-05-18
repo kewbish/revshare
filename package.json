@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "description": "A JS library for revenue-sharing, made for #gftwhackathon.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "web-monetization",
     "revenue-sharing",

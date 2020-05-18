@@ -3,7 +3,7 @@ class RevShare extends HTMLElement {
     connectedCallback() {
         this.style.margin = "0";
         this.style.padding = "0";
-        console.log('New Revshare element created.');
+        console.log('New Revshare element successfully created.');
     }
     attributeChangedCallback() {
         this.checkParsedPointers();
@@ -16,11 +16,11 @@ class RevShare extends HTMLElement {
         var parsedPointers = JSON.parse(this.getAttribute('pointers'));
         Object.values(parsedPointers).forEach(function (item){
             if (typeof item !== 'number'){
-                throw "RevShareTypeError: revshare proportions are of incorrect type. Check that your pointers attribute is correctly formatted.";
+                throw "RevShareProportionTypeError: revshare proportions are of incorrect type. Check that your pointers attribute is correctly formatted.";
             }
         });
         if (Object.values(parsedPointers).reduce((a, b) => a + b) != 100) {
-            console.warn('RevShareProportionWarning: revshare proportions do not sum to 100. Check that these proportions are correct');
+            console.warn('RevShareProportionSumWarning: revshare proportions do not sum to 100. Check that these proportions are correct.');
         }
     }
 }
