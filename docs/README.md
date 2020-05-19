@@ -39,3 +39,5 @@ Then, any existing monetization meta tag is overwritten with the chosen payment 
 > :warning: This rev-share specification is not 100% accurate, due to the probablistic nature and the limitations of the Web Monetization format.  
 
 > :warning: Nesting `<rev-share>` elements will not 'nest' the revenue sharing pointers (revshare.js does not take nesting levels into account). Using `<rev-share>` tags on one nesting level is recommended.   
+
+> :warning: If no `<rev-share>` elements are found, the monetization `<meta>`'s content will be set to `undefined`. This should be handled in your application, and the payment pointer set to a fallback value.  

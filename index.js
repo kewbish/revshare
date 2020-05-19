@@ -11,6 +11,14 @@ class RevShare extends HTMLElement {
         this.checkParsedPointers();
         genMeta();
     }
+    disconnectedCallback() {
+        if (document.getElementsByTagName('rev-share').length == 0){
+            console.warn('RevShareNoElementsWarning: no revshare elements found. Check this is the intended behaviour, and reset the monetization pointer.');
+        }
+        else{
+            genMeta();
+        }
+    }
     static get observedAttributes() {
         return ['pointers'];
     }
