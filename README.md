@@ -32,11 +32,11 @@ This tag requires a `pointers` attribute, formatted in JSON.
 ...
 ```
 
-## Pointers Attribute
-The `pointers` attribute formatted as a `wallet: percentage` keypair. Currently, a wallet can only be set up on [Coil.com](http://coil.com).  
-A `RevSharePointerError` will be thrown if a `pointers` attribute is not found.  
-A `RevShareProportionSumWarning` will be thrown if the percentages do not sum to 100. This is due to the way the web monetization is set up.  
-A `RevShareProportionTypeError` will be thrown if the percentage value is not of the number type.  
+> :warning: This rev-share specification is not 100% accurate, due to the probablistic nature and the limitations of the Web Monetization format.  
+
+> :warning: Nesting `<rev-share>` elements will not 'nest' the revenue sharing pointers (revshare.js does not take nesting levels into account). Using `<rev-share>` tags on one nesting level is recommended.
+
+Additional documentation can be found [in the docs folder](./docs/README.md).
 
 ## Contributions
-Issues and suggestions / requests are welcome - but be gentle, I'm new to JS.  
+Issues and feature requests are welcome - but be gentle, I'm new to JS.  
