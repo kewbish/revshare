@@ -13,7 +13,7 @@ This package is available on NPM at [@kewbish/revshare](https://www.npmjs.com/pa
 - Run `npm i @kewbish/revshare` to install it in your project.  
 - It can then be referenced as below:
 ```
-<script src="./node_modules/@kewbish/revshare/dist/index.js"></script>
+<script src="./node_modules/@kewbish/revshare/dist/index.min.js"></script>
 ```
 
 Alternatively, add a `<script>` tag in your `<head>`:  

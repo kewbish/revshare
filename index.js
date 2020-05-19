@@ -35,7 +35,9 @@ class RevShare extends HTMLElement {
     }
 }
 
-customElements.define('rev-share', RevShare);
+if ('customElements' in window){
+    customElements.define('rev-share', RevShare);
+}
 
 function pickPointer() {
     var revEls = document.getElementsByTagName('rev-share');
