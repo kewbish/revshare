@@ -3,13 +3,15 @@ class RevShare extends HTMLElement {
     connectedCallback() {
         this.style.margin = "0";
         this.style.padding = "0";
+    }
+    attributeChangedCallback() {
         if (!this.hasAttribute('pointers')){
             throw "RevSharePointerError: revshare pointer list cannot be found. Check that it exists and is correctly formatted.";
         }
-    }
-    attributeChangedCallback() {
-        this.checkParsedPointers();
-        genMeta();
+        else{
+            this.checkParsedPointers();
+            genMeta();
+        }
     }
     disconnectedCallback() {
         if (document.getElementsByTagName('rev-share').length == 0){
