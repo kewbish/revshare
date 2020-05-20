@@ -3,6 +3,9 @@ class RevShare extends HTMLElement {
     connectedCallback() {
         this.style.margin = "0";
         this.style.padding = "0";
+        if (this.hasAttribute('exclusive')){
+            this.style.display = "none";
+        }
     }
     attributeChangedCallback() {
         if (!this.hasAttribute('pointers')){
@@ -71,3 +74,9 @@ function genMeta() {
 window.addEventListener('load', () => {
     genMeta();
 });
+
+if (document.monetization) {
+    document.monetization.addEventListener('monetizationstart', () => {
+        document.querySelectorAll('rev-share[exclusive]').forEach(i => delete i.style.display);
+    });
+}
