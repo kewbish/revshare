@@ -4,7 +4,7 @@ class RevShare extends HTMLElement {
         this.style.margin = "0";
         this.style.padding = "0";
         if (this.hasAttribute('exclusive')){
-            this.style.display = "none";
+            this.classList.add('rs-excl-hid');
         }
     }
     attributeChangedCallback() {
@@ -71,12 +71,16 @@ function genMeta() {
     document.head.appendChild(monTag);
 }
 
+var element = document.createElement("style");
+element.innerHTML = ".rs-excl-hid {display: none;}";
+document.head.appendChild(element);
+
 window.addEventListener('load', () => {
     genMeta();
 });
 
 if (document.monetization) {
     document.monetization.addEventListener('monetizationstart', () => {
-        document.querySelectorAll('rev-share[exclusive]').forEach(i => delete i.style.display);
+        Array.from(document.querySelectorAll('rev-share[exclusive]')).forEach(i => i.classList.remove('rs-excl-hid'));
     });
 }
