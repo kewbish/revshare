@@ -30,6 +30,13 @@ A `RevSharePointerError` will be thrown if a `pointers` attribute is not found.
 A `RevShareProportionSumWarning` will be thrown if the percentages do not sum to 100. This is due to the way the web monetization is set up.  
 A `RevShareProportionTypeError` will be thrown if the percentage value is not of the number type.  
 
+## Exclusive <rev-share>
+By adding the `exclusive` attribute to any `<rev-share>` element, it will be hidden until document monetization starts.  
+It applies the `rs-excl-hid` class to the element - do **not** override this class in your stylesheet, or attempt to remove it through other JS scripts - this will remove the exclusive functionality.  
+(If you do choose to override it at your own risk, include the `display: none` property.)  
+
+> :warning: Just hiding the element can be confusing for a user. Consider implementing an additional component or element to notify the user about the use of Web Monetization and the reason why the content is hidden.  
+
 ## <meta> Generation
 As page-views go up, the percentage probability of getting a correct pointer rev-share distribution rises.  
 Revshare.js chooses a random `<rev-share>` element on the page, regardless of nesting level, and parses its pointers. It then parses the probability amount associated with a particular pointer and randomly chooses a payment pointer.  

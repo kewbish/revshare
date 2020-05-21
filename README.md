@@ -32,11 +32,11 @@ This tag requires a `pointers` attribute, formatted in JSON.
 ...
 ```
 
+Additional documentation can be found [in the docs folder](./docs/README.md).
+
 > :warning: This rev-share specification is not 100% accurate, due to the probablistic nature and the limitations of the Web Monetization format.  
 
 > :warning: Nesting `<rev-share>` elements will not 'nest' the revenue sharing pointers (revshare.js does not take nesting levels into account). Using `<rev-share>` tags on one nesting level is recommended.
-
-Additional documentation can be found [in the docs folder](./docs/README.md).
 
 ## Contributions
 Issues and feature requests are welcome - but be gentle, I'm new to JS.  
