@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revshare.js 💸</title>
+    <meta name="description" content="Revshare.js - A web monetization component library.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+</head>
+<body>
+    <section class="hero is-success is-medium">
+        <div class="hero-body has-text-centered">
+            <h1 class="title is-1">Revshare.js 💸</h1>
+            <p class="subtitle"><a class="has-text-white" style="text-decoration: underline;" href="https://www.npmjs.com/package/@kewbish/revshare">Find on NPM</a> or <a style="text-decoration: underline;" class="has-text-white" href="https://unpkg.com/@kewbish/revshare">Unpkg</a>.<br>Created by <a style="text-decoration: underline;" class="has-text-white" href="https://kewbish.github.io">Kewbish</a>.</p>
+        </div>
+    </section>
+    <section class="container">
+        <br>
+        <h1 class="title">Here's how to get started.</h1>
+        <p>Revshare.js works with the <a href="https://webmonetization.org/">proposed Web Monetization API</a>.</p>
+        <div class="box">
+            <h1 class="title is-4">Step 1. Add Revshare.js</h1>
+            <p>Add a script tag in your head, referencing either the script in the node_modules dist folder, or the unpkg CDN.</p>
+            <pre>&lt;script src="https://unpkg.com/@kewbish/revshare"&gt;&lt;/script&gt;</pre>
+        </div>
+        <div class="box">
+            <h1 class="title is-4">Step 2. Add a &lt;rev-share&gt; element</h1>
+            <p>Add a rev-share tag. Required is a pointers attribute, which will include a JSON-formatted mapping of wallet to percentage pointer</p>
+            <pre>&lt;rev-share pointers='[{"$bob.wallet": 50, "$alice.wallet": 50}]'&gt;
+    ...
+&lt;/rev-share&gt;</pre>
+        </div>
+        <div class="box">
+            <h1 class="title is-4">Step 3. Sit back, and relax.</h1>
+            <p>Revshare.js will take care of adding, updating, and removing payment pointers. It's based on the probablistic rev-share model outlined <a href="https://webmonetization.org/docs/probabilistic-rev-sharing">on the Web Monetization</a> page.</p>
+        </div>
+    </section>
+    <br><br>
+</body>
+</html>
