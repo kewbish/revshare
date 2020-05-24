@@ -6,7 +6,8 @@ Created by [Kewbish](https://kewbish.github.io).
 Released under the MIT License.  
 
 This project is based on the [proposed Web Monetization interface](https://webmonetization.org/). It's a 'browser API which allows the creation of a payment stream from the user agent to the website'. Currently, this isn't implemented in any major browsers, but is available through an extension or a custom browser. [Check out Coil.com for more.](https://coil.com).  
-This project was created for the [#gftwhackathon](https://dev.to/t/gftwhackathon).
+This project was created for the [#gftwhackathon](https://dev.to/t/gftwhackathon).  
+A simple landing page is available [on the Pages](https://kewbish.github.io/revshare).  
 
 ## Installation Usage
 This package is available on NPM at [@kewbish/revshare](https://www.npmjs.com/package/@kewbish/revshare).  
