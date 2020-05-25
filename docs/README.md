@@ -1,9 +1,9 @@
-# Revshare.js Documentation
+# Revshare.js 💸 Documentation
 
 ## Installation Usage
 This package is available on NPM at [@kewbish/revshare](https://www.npmjs.com/package/@kewbish/revshare).  
 - Run `npm i @kewbish/revshare` to install it in your project.  
-- It can then be referenced as below:
+- It can (usually) then be referenced as below:
 ```
 <script src="./node_modules/@kewbish/revshare/dist/index.min.js"></script>
 ```
@@ -18,7 +18,7 @@ Add a `<rev-share>` tag anywhere in your body.
 This tag requires a `pointers` attribute, formatted in JSON.  
 ```
 ...
-<rev-share pointers="{"$john.wallet": 50, "$alicia.wallet": 50}">
+<rev-share pointers='{"$john.wallet": 50, "$alicia.wallet": 50}'>
     <p>This is your revenue-shared content!</p>
 </rev-share>
 ...
